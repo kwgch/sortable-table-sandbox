@@ -1,0 +1,6 @@
+= simple_form_for @fruit, :html => { :class => "form-horizontal" } do |f|
+  = f.input :name
+  = error_span(@fruit[:name])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), fruits_path, :class => 'btn btn-default'
