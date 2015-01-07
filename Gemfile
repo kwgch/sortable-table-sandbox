@@ -18,6 +18,8 @@ gem 'ranked-model'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'simple_form'
+gem 'spring-commands-rspec'
+gem 'did_you_mean'
 
 group :development do
   gem 'meta_request'
@@ -36,4 +38,13 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails', '~> 3.0.2'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'pry-byebug'
+end
+
+group :test do
+  gem 'poltergeist', '~> 1.5.1'
+  gem 'capybara', '~> 2.4.1'
+  gem 'database_cleaner'
 end

@@ -9,7 +9,7 @@ table.table.table-bordered.table-sortable
       th=t '.actions', :default => t("helpers.actions")
   tbody
     - @fruits.each do |fruit|
-      tr.item(data = { model_name: fruit.class.name.underscore, update_url: fruit_sort_path(fruit) })
+      tr.item(data = { model_name: fruit.class.name.underscore, update_url: fruit_sort_path(fruit) } id = "fruit-#{fruit.id}")
         td= link_to fruit.name, fruit_path(fruit)
         td=l fruit.created_at
         td
