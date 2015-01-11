@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0.rc2'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -22,6 +21,7 @@ gem 'spring-commands-rspec'
 gem 'did_you_mean'
 
 group :development do
+  gem 'sqlite3'
   gem 'meta_request'
   gem 'better_errors'
   gem 'rails-footnotes'
@@ -47,4 +47,9 @@ group :test do
   gem 'poltergeist', '~> 1.5.1'
   gem 'capybara', '~> 2.4.1'
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end

@@ -17,6 +17,7 @@ feature 'Fruit pages' do
 
     source = page.find("#fruit-#{apple.id}")
     target = page.find("#fruit-#{orange.id}")
+#     target = page.find("#fruit-#{banana.id}")
 
     expect{
       source.drag_to(target)
